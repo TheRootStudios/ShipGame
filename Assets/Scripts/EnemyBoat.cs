@@ -50,6 +50,8 @@ public class EnemyBoat : Boat
     {
         base.OnCollisionEnter2D(collision);
 
+        //Range 0 = Chaser
+
         if(range == 0)
 		{
             if (collision.otherCollider.TryGetComponent(out Boat boat))
@@ -64,8 +66,6 @@ public class EnemyBoat : Boat
 
             }
         }
-
-
     }
 
 }

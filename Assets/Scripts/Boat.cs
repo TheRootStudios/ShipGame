@@ -58,8 +58,6 @@ public class Boat : MonoBehaviour
         Vector3 dir = (transform.position - pos).normalized;
         
         GetDamage(1,dir);
-
-
     }
 
     public void GetDamage(float damage, Vector3 direction, float collisionForce = 100)
@@ -148,7 +146,7 @@ public class Boat : MonoBehaviour
 	{
         GameObject ball = GameObject.Instantiate(canonBallPrefab, frontalWeapon.position + frontalWeapon.right * 0.3f, Quaternion.identity); ;
         ball.transform.right = frontalWeapon.right;
-        ball.GetComponent<cannonBall>().Owner = this;
+        ball.GetComponent<CannonBall>().Owner = this;
 	}
 
     public void ShotRightWeapons()
@@ -157,7 +155,7 @@ public class Boat : MonoBehaviour
 		{
             GameObject ball = GameObject.Instantiate(canonBallPrefab, item.position + item.right * 0.3f, Quaternion.identity); ;
             ball.transform.right = item.right;
-            ball.GetComponent<cannonBall>().Owner = this;
+            ball.GetComponent<CannonBall>().Owner = this;
         }
     }
 
@@ -167,7 +165,7 @@ public class Boat : MonoBehaviour
         {
             GameObject ball = GameObject.Instantiate(canonBallPrefab, item.position + item.right * 0.3f, Quaternion.identity); ;
             ball.transform.right = item.right;
-            ball.GetComponent<cannonBall>().Owner = this;
+            ball.GetComponent<CannonBall>().Owner = this;
         }
     }
 
